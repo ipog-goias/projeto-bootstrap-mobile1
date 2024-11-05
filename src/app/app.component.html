@@ -1,0 +1,26 @@
+<h1>App Component</h1>
+
+<button type="button" class="btn btn-primary" (click)="open(modalContent)">Abrir Modal</button>
+
+
+<ng-template #modalContent let-modal>
+  <!--Cabeçalho-->
+  <div class="modal-header">
+    <h4 class="modal-title">T&iacute;tulo do Modal</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+
+  <!--body - conteúdo-->
+  <div class="modal-body">
+    <p>Conte&uacute;do do modal</p>
+  </div>
+
+  <!--rodapé-->
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close click')">Fechar</button>
+  </div>
+
+</ng-template>
+
+
+<router-outlet />
